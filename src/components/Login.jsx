@@ -5,7 +5,7 @@ import { LoginContext } from "../Context/LoginContext";
 import { Formik } from "formik";
 
 const Login = () => {
-  const [isLoggedIn, setIsLoggedIn] = useContext(LoginContext);
+  const {isLoggedIn, setIsLoggedIn}= useContext(LoginContext);
   useEffect(() => {
     console.log(isLoggedIn);
   }, [isLoggedIn]);

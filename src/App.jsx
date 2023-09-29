@@ -14,10 +14,9 @@ const App = () => {
 
         <Routes>
           <Route path="/" Component={Login} />
-          <Route path="/home" Component={Home}/>
+          <Route path="/home" Component={Home} />
           <Route path="/addTasks" Component={CreateTask} />
           <Route path="/showTasks" Component={DisplayTask} />
-
         </Routes>
       </Router>
     </div>

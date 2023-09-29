@@ -5,8 +5,20 @@ export const LoginContext = createContext(null);
 
 const LoginContextProvider = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [text, setText] = useState("");
+  const [tasks, setTasks] = useState([]);
+
+
+  const deleteTask = (index) => {
+    const updatedTasks = [...tasks];
+    updatedTasks.splice(index, 1);
+    setTasks(updatedTasks);
+  };
+
   return (
-    <LoginContext.Provider value={[isLoggedIn, setIsLoggedIn]}>
+    <LoginContext.Provider
+      value={{ isLoggedIn, setIsLoggedIn, tasks, setTasks, text, setText ,deleteTask}}
+    >
       {children}
     </LoginContext.Provider>
   );
